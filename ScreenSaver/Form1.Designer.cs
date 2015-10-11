@@ -43,7 +43,6 @@ namespace ScreenSaver
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(284, 263);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("https://www.google.com", System.UriKind.Absolute);
             // 
             // Form1
             // 
@@ -59,6 +58,7 @@ namespace ScreenSaver
 
         protected override void OnLoad(EventArgs e)
         {
+            this.webBrowser1.DocumentText = Properties.Resources.ResourceManager.GetString("index");
             this.webBrowser1.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(webBrowser1_DocumentCompleted);
             Cursor.Hide();
 
